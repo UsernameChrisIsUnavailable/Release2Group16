@@ -1,0 +1,69 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/top_nav.ejs %>
+<!--Main content-->
+<main>
+    <div class ="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-10">
+                <h1><%= title %></h1>
+                <% if(typeof displayName=='string' && displayName) { %>
+                    <a href="/gameslist/add" class="btn btn-primary" role ="button">
+                    <i class="fas fa-plus-circle"></i> Add Game </a>
+                <br>
+                <% } %>
+                <br>
+        <table class="table table-bordered table-striped table-hover">
+        <tr class="d-flex">
+        <% if(typeof displayName=='string' && displayName) { %> 
+            <th class="text-center col-1"></th>  
+            <th class="text-center col-1"></th>  
+        <% } else { %>
+        <th class="text-center col-1">Name</th>   
+            <th class="text-center col-1">Year</th>   
+            <th class="text-center col-3">Review</th>   
+            <th class="text-center col-3">Description</th> 
+            <th class="text-center col-1">Rating</th>
+            <th class="text-center col-1">Price</th> 
+        <% } %>
+
+        </tr>
+
+        <!--repeats the template-->
+        <% for(let count=0; count<Gameslist.length; count++) { %>
+            <tr class = "d-flex">
+            <% if(typeof displayName=='string' && displayName) { %>
+                <td class="text-center col-1"><%= Gameslist[count].Name %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Year %></td>
+                <td class="text-center col-3"><%= Gameslist[count].Review %></td>
+                <td class="text-center col-3"><%= Gameslist[count].Description %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Rating %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Price %></td>
+                <td class="text-center col-1">
+                    <a href="/gameslist/edit/<%= Gameslist[count]._id %>"
+                        class="btn btn-primary">
+                        <i class="fas fa-pencil-alt"></i> Edit </a>
+                </td>
+                <td class="text-center col-1">
+                    <a href="/gameslist/delete/<%= Gameslist[count]._id %>"
+                        class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete </a>
+                </td>
+            <% } else { %>
+                <td class="text-center col-1"><%= Gameslist[count].Name %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Year %></td>
+                <td class="text-center col-3"><%= Gameslist[count].Review %></td>
+                <td class="text-center col-3"><%= Gameslist[count].Description %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Rating %></td>
+                <td class="text-center col-1"><%= Gameslist[count].Price %></td>
+            <% } %>
+            </tr>
+        <%} %>
+    </table>
+    </div>
+
+</main>
+
+<%- include ../partials/bot_nav.ejs %>
+  
+</body>
+</html>
