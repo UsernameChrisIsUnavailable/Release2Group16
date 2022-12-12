@@ -20,7 +20,9 @@
 })();
 
 
-//from bootsrap
+//from bootstrap
+/**beforesubmitting double check that all of this code is needed, i don't think it will be */
+/*
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -67,3 +69,4 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 //end of bootsrap code
+*/
