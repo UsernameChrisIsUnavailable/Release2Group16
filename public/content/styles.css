@@ -33,3 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 #caption{
     padding-left: 300px;
 }
+
+#welcome{
+    padding-left: 240px; 
+}
