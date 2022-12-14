@@ -29,3 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 {
    padding-left: 480px;
 }
+
+#caption{
+    padding-left: 300px;
+}
