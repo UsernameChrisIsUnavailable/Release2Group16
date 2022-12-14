@@ -1,44 +1,51 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/top_nav.ejs %>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <main class="container">
-    <!--Message area-->
-    <% if (message.length > 0) { %>
-    <div class="alert alter-danger">
-        <%=message %>
-    </div>
-    <%} %>
+  <!--Message area-->
+  <% if (message.length > 0) { %>
+  <div class="alert alter-danger">
+    <%=message %>
+  </div>
+  <%} %>
+
+  <div class="loginrow">
+    <div class="offset-md-4 col-md-4">
+      <div id="login">
     
-    <div class="row">
-        <div class="offset-md-4 col-md-4">
-            <h1>Please login</h1>
-            <form method="post" autocomplete="off">
-                <fieldset class="form-group">
-                    <label for="username"></label>
-                    <input type="text" class="form-control"
-                    name="username" 
-                    placeholder="Enter username"
-                    id="username" required autofocus>
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="password"></label>
-                    <input type="password" class="form-control"
-                    name="password" 
-                    placeholder="Enter password"
-                    id="password" required>
-                    or
-                    <a href="/register">Register Here</a>
-                </fieldset>
-                <fieldset class="form-group text-right">
-                    <input type="submit" class="btn btn-success"
-                    value="Login">
-                    <a href="/"></a>
-                        <input type="button" class="btn btn-warning" value="Cancel">
-                    </a>
-                </fieldset>
-            </form>
+        <h3 class="text-center text-white pt-5" style="color:white" >Login form</h3>
+        <div class="container">
+          <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+              <div id="login-box" class="col-md-12">
+                <form id="login-form" class="form" action="" method="post">
+                  <h3 class="text-center text-info">Login</h3>
+                  <div class="form-group">
+                    <label for="username" class="text-info">Username:</label><br>
+                    <input type="text" name="username" id="username" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="text-info">Password:</label><br>
+                    <input type="text" name="password" id="password" class="form-control">
+                  </div>
+                  <div id="register-link" class="text-right">
+                    <a href="/register" class="text-info">Register here</a>
+                  </div>
+                  <div id="register-link" class="text-right">
+                    <a href="/" class="text-info">Cancel</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </main>
 
 <%- include ../partials/bot_nav.ejs %>
