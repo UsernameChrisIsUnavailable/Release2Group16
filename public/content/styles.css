@@ -53,5 +53,10 @@ padding: 20px;
 
 .loginrow {
     background-color: #000000;
+    color: white;
+}
 
+.registerrow {
+    background-color: #000000;
+    color: white;
 }
