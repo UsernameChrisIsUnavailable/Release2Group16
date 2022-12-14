@@ -17,3 +17,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     overflow: auto;
 }
 
+#images img:hover
+{
+    opacity:0.6;
+    color:#000000;
+    padding:30px;
+}
