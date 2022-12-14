@@ -23,3 +23,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     color:#000000;
     padding:30px;
 }
+
+.logo  img
+{
+    position: relative;
+}
